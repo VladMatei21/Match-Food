@@ -1,0 +1,36 @@
+{
+  "name": "match-food",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"node --env-file-if-exists=.env --watch server/index.mjs\" \"vite --host 0.0.0.0\"",
+    "dev:api": "node --env-file-if-exists=.env --watch server/index.mjs",
+    "dev:web": "vite --host 0.0.0.0",
+    "build": "tsc --noEmit && vite build",
+    "build:standalone": "tsc --noEmit && node scripts/build-standalone.mjs",
+    "preview": "npm run build:standalone && vite preview --host 0.0.0.0 --port 4173 --strictPort --outDir standalone",
+    "start": "node --env-file-if-exists=.env server/index.mjs",
+    "test": "node --test server/*.test.mjs",
+    "test:e2e": "node --test tests/workflows.test.mjs"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "lucide-react": "1.61.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "concurrently": "10.0.6",
+    "playwright": "1.62.1",
+    "typescript": "7.0.2",
+    "vite": "8.3.5"
+  }
+}

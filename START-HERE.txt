@@ -1,0 +1,100 @@
+MATCHFOOD — START HERE
+
+THE SIMPLEST WAY TO OPEN THE WEBSITE
+
+1. On the GitHub repository page, select Code > Download ZIP, then extract it.
+   Windows: right-click the ZIP and select Extract All.
+   macOS: double-click the ZIP.
+2. Open the extracted project folder (usually Match-Food-main).
+3. Double-click MatchFood.html, or right-click it and choose
+   Open with > Google Chrome or Microsoft Edge.
+4. Choose Donor or Charity.
+
+That one HTML file includes the website, styles, artwork, and role workflows.
+You do not need Node.js, npm, Visual Studio Code, or a running server for it.
+The core website works offline. Google Maps links need Internet when opened.
+Changes are saved in that browser when browser storage is available.
+
+
+TO EDIT THE SOURCE CODE OR RUN THE SERVER VERSION
+
+What to install:
+- Node.js version 24 or newer, from https://nodejs.org
+  npm is included with Node.js.
+- Visual Studio Code is a convenient optional editor.
+
+1. Open the extracted project folder in Visual Studio Code.
+2. Choose Terminal > New Terminal.
+   You can also use Windows Command Prompt/PowerShell or macOS Terminal,
+   opened in the extracted project folder.
+3. Check the installed tools:
+
+   node --version
+   npm --version
+
+   Node must report v24 or newer.
+
+4. Run these commands, one at a time:
+
+   npm ci
+   npm run dev
+
+5. Keep that terminal open. In your browser, open the address printed by
+   Vite for port 5173. Both the website and API start together.
+6. Press Ctrl+C in the terminal to stop them.
+
+The first npm ci downloads dependencies and needs Internet.
+For later starts, just run npm run dev from the same folder.
+
+On Windows, if PowerShell blocks npm.ps1, use Command Prompt instead,
+or use npm.cmd ci and npm.cmd run dev in PowerShell.
+
+The ready-to-open file is MatchFood.html. The separate index.html file
+belongs to the source project and is loaded by the development server.
+
+
+OTHER RUN OPTIONS
+
+Serve the self-contained website instead of using a local file:
+
+   npm ci
+   npm run preview
+
+Open the address printed for port 4173. This version needs no API server.
+
+Build and run the full website using one server:
+
+   npm ci
+   npm run build
+   npm start
+
+Open the address for port 3001. Keep the terminal open.
+
+After changing source code, rebuild the browser-ready file with:
+
+   npm run build:standalone
+
+The updated file will be standalone/MatchFood.html.
+
+
+WHAT IS INCLUDED
+
+MatchFood.html      Ready-to-open website; no installation needed.
+START-HERE.txt      These instructions.
+README.md           Additional project documentation.
+package.json        Available commands and dependencies.
+package-lock.json   Exact dependency lockfile for npm ci.
+src/                React/TypeScript interface and styles.
+server/             Express API and SQLite storage code.
+public/             Original food illustrations and site icon.
+scripts/            Self-contained website builder.
+tests/              Browser workflow checks.
+standalone/         Created by npm run build:standalone.
+
+There is no signup step. Choose a preconfigured Donor or Charity profile.
+Donors manage their own food and see nearby charities. Charities browse
+food and request pickups. No emails or text messages are sent automatically.
+
+The self-contained file stores its changes in the browser. The server
+version creates its own local database in .data. Those are separate stores.
+Your local database is created automatically on the first server start.

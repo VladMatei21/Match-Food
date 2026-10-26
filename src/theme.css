@@ -1,0 +1,164 @@
+/* MatchFood palette: fern green, cream white, and light orange. */
+:root {
+  --fern: #4f7942;
+  --cream: #fff9ed;
+  --light-orange: #ffd0a1;
+  --ink: #24402a;
+  --soft-ink: #59684f;
+  --canvas: var(--fern);
+  --surface: var(--cream);
+  --forest: var(--fern);
+  --forest-hover: #3f6236;
+  --sage: #edf0df;
+  --orange: var(--light-orange);
+  --muted: var(--soft-ink);
+  --border: #d9ddc7;
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+body, .app-shell { background: var(--canvas); }
+.role-page { background: var(--fern); color: var(--cream); }
+.role-page-brand, .role-page-brand .brand-mark,
+.role-page-title, .role-page-subtitle { color: var(--cream); }
+.role-page-subtitle { opacity: .86; }
+.role-page-error { background: var(--light-orange); color: var(--ink); }
+.role-page .role-card { background: var(--cream); color: var(--ink); border-color: #fff9edaa; }
+.role-page .role-card:hover { background: #fffdf5; border-color: var(--cream); }
+.role-page .role-card > .role-icon { background: var(--light-orange); color: var(--ink); border-color: var(--light-orange); }
+.role-page .role-card:nth-child(2) { background: var(--light-orange); border-color: var(--light-orange); }
+.role-page .role-card:nth-child(2):hover { background: #ffdbb7; border-color: #ffdbb7; }
+.role-page .role-card:nth-child(2) > .role-icon { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.role-page .role-card strong, .role-page .role-card h3,
+.role-page .role-card > svg { color: var(--ink); }
+.role-page .role-card > span:not(.role-icon) > span,
+.role-page .role-card p, .role-page .role-card small { color: var(--soft-ink); }
+.page-content { color: var(--cream); }
+h1, h2, h3, h4 { color: var(--ink); }
+::selection { background: var(--light-orange); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--ink); box-shadow: 0 0 0 4px var(--cream); }
+
+/* The fern canvas stays visible around warm, readable cream surfaces. */
+.hero, .stat, .food-card, .request-card, .how-card, .profile-layout,
+.empty-state, .modal { background: var(--cream); color: var(--ink); border-color: #e8e4cf; }
+.hero { box-shadow: 0 12px 36px #24402a12; }
+.hero h1, .hero h1 em, .stat-value, .food-title, .detail-title,
+.modal-header h2, .how-card h3, .request-card h3 { color: var(--ink); }
+.eyebrow, .hero-copy > p, .hero-note, .hero-text-link,
+.stat-value > span, .stat-label, .food-category, .food-donor,
+.food-meta, .food-distance, .food-quantity, .field-help,
+.detail-description, .detail-section p, .detail-section h3,
+.detail-section > strong, .detail-section dt, .detail-section dd,
+.request-card p, .request-meta, .request-date, .how-card p,
+.verified, .auth-intro, .form-intro,
+.profile-signout { color: var(--soft-ink); }
+.hero-text-link:hover, .food-title > button:hover { color: var(--ink); }
+.hero-art > img { border-radius: 18px; }
+.hero-floating-label { background: var(--cream); color: var(--soft-ink); border-color: #e8e4cf; }
+.hero-floating-label strong { color: var(--ink); }
+.hero-floating-icon { background: var(--light-orange); color: var(--ink); }
+.stat-icon, .stat:nth-child(2) .stat-icon, .stat:nth-child(3) .stat-icon {
+  background: var(--light-orange); color: var(--ink); border-color: #f1c398;
+}
+.food-card:hover { border-color: var(--light-orange); box-shadow: 0 8px 24px #24402a24; }
+.food-footer { border-color: var(--border); }
+.food-badge, .favorite-btn { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.food-badge.reserved, .food-badge.urgent { background: var(--light-orange); color: var(--ink); }
+.favorite-btn:hover, .favorite-btn.is-saved, .favorite-btn.active { background: var(--light-orange); color: var(--ink); }
+.food-footer > .card-action { background: var(--light-orange); color: var(--ink); border-color: #efbd8d; }
+.donor-dot, .status-dot { background: var(--fern); }
+.food-donor > svg { color: var(--fern); }
+
+/* Navigation and headings sit directly on the green background. */
+.sidebar { background: var(--fern); color: var(--cream); border-color: #fff9ed40; }
+.brand, .brand-mark { color: var(--cream); }
+.brand-dot { color: var(--light-orange); }
+.sidebar-section-label, .sidebar-label, .sidebar-footer,
+.nav-item, .topbar-title, .topbar-title > strong, .topbar-title > svg,
+.desktop-breadcrumb { color: var(--cream); }
+.nav-item:hover { background: #fff9ed1c; color: var(--cream); }
+.nav-item.active { background: var(--cream); color: var(--ink); }
+.sidebar-note { background: var(--forest-hover); border-color: #fff9ed33; }
+.sidebar-note h3, .sidebar-note h4, .sidebar-note p,
+.sidebar-note button, .sidebar-note a { color: var(--cream); }
+.sidebar-note-icon { background: var(--light-orange); border-color: var(--light-orange); color: var(--ink); }
+.sidebar-footer .status-dot { background: var(--light-orange); }
+.section-heading h2, .section-heading p, .section-heading > span,
+.section-heading > small, .section-heading .eyebrow,
+.page-header h1, .page-header p, .results-line, .live-indicator,
+.filter-result, .feed-footer, .footer-note, .footer-note > button { color: var(--cream); }
+.live-indicator .status-dot { background: var(--light-orange); }
+.footer-note, .tabs { border-color: #fff9ed4d; }
+.tab { color: var(--cream); }
+.tab:hover, .tab.active { color: var(--cream); border-bottom-color: var(--light-orange); }
+.topbar .icon-button, .topbar .btn.ghost { color: var(--cream); }
+.topbar .icon-button:hover, .topbar .btn.ghost:hover { background: #fff9ed1c; color: var(--cream); }
+.avatar, .notification-count, .nav-item .count { background: var(--light-orange); color: var(--ink); border-color: var(--cream); }
+.notification-dot { background: var(--light-orange); }
+.topbar-actions > button.role-switch { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+
+/* Orange marks actions; dark green keeps the button labels legible. */
+.btn.primary, .btn-primary { background: var(--light-orange); border-color: var(--light-orange); color: var(--ink); }
+.btn.primary:hover, .btn-primary:hover { background: #f5bc85; border-color: #f5bc85; color: var(--ink); box-shadow: 0 3px 12px #24402a26; }
+.btn.secondary, .btn-secondary { background: var(--cream); color: var(--ink); border-color: #aab79b; }
+.btn.secondary:hover, .btn-secondary:hover { background: var(--light-orange); color: var(--ink); border-color: var(--light-orange); }
+.btn.ghost, .btn-ghost, .icon-button { color: var(--ink); }
+.btn.ghost:hover, .btn-ghost:hover, .icon-button:hover { background: #ffd0a155; color: var(--ink); }
+.search-field, .location-select, .sort-select { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.search-field input, .sort-select select { color: var(--ink); }
+.search-field input::placeholder { color: var(--soft-ink); }
+.search-field:focus-within { border-color: var(--light-orange); box-shadow: 0 0 0 3px #ffd0a166; }
+.chip { background: transparent; color: var(--cream); border-color: #fff9ed99; }
+.chip:hover, .chip.active { background: var(--light-orange); color: var(--ink); border-color: var(--light-orange); }
+
+/* Forms, role selection, and collection details share the same warm surfaces. */
+.modal-header, .modal-footer, .request-form, .profile-signout { border-color: var(--border); }
+.modal-footer { background: #f4efdf; color: var(--ink); }
+.modal-footer > p, .modal-header p, .field > label,
+.field > span:first-child, .field legend, .checkbox-row { color: var(--soft-ink); }
+.input, .field input:not([type='checkbox']), .field select, .field textarea {
+  background: var(--cream); color: var(--ink); border-color: #aab79b;
+}
+.input::placeholder, .field input::placeholder, .field textarea::placeholder { color: var(--soft-ink); }
+.field input:focus, .field select:focus, .field textarea:focus, .input:focus {
+  border-color: var(--fern); box-shadow: 0 0 0 3px #ffd0a188;
+}
+.field summary, .tag-list .checkbox-row, .tag, .notice,
+.contact-card, .detail-layout > aside.donor-info {
+  background: #f1efde; color: var(--ink); border-color: var(--border);
+}
+.contact-card > strong, .contact-card > span, .contact-card p, .contact-card a,
+.detail-layout > aside.donor-info h3, .detail-layout > aside.donor-info p,
+.detail-layout > aside.donor-info .eyebrow { color: var(--ink); }
+.role-card, .role-option { background: var(--cream); color: var(--ink); border-color: #aab79b; }
+.role-card:hover, .role-option.selected { background: #f1efde; border-color: var(--fern); }
+.role-card h3, .role-card strong, .role-card > svg,
+.role-card.role-option > span:not(.role-icon) > span { color: var(--ink); }
+.role-card.role-option > .role-icon { background: #edf0df; color: var(--ink); border-color: #d7ddc6; }
+.auth-options > .role-card:nth-child(2), .role-card.charity { background: var(--light-orange); border-color: #efbd8d; }
+.auth-options > .role-card:nth-child(2):hover, .role-card.charity:hover { background: #f5bc85; border-color: #e9b27d; }
+.auth-options > .role-card:nth-child(2) > .role-icon { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+.request-card .request-message, .request-message { background: #f1efde; color: var(--ink); border-left-color: var(--fern); }
+.pickup-note, .detail-callout, .request-status, .request-status.pending { background: var(--light-orange); color: var(--ink); border-color: #efbd8d; }
+.detail-callout p { color: var(--ink); }
+.request-status.accepted { background: var(--fern); color: var(--cream); border-color: var(--fern); }
+.request-status.completed { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+.request-status.declined { background: #ffe7ce; color: #75401f; border-color: #efbd8d; }
+.error-banner, .btn.danger { background: #ffe7ce; color: #75401f; border-color: #e8b98a; }
+.how-card > svg, .how-card > .eyebrow:first-child { color: var(--fern); }
+.toast { background: var(--ink); color: var(--cream); border-color: var(--light-orange); }
+.toast > .icon-button { color: var(--cream); }
+.toast > .icon-button:hover { background: #fff9ed24; }
+.loading-skeleton { background: #fff9ed33; }
+.donor-intro, .charity-card { background: var(--cream); color: var(--ink); border-color: #e8e4cf; }
+.donor-intro h1, .charity-card h3 { color: var(--ink); }
+.donor-intro .eyebrow, .donor-intro p,
+.charity-type, .charity-card > p, .charity-meta, .charity-distance { color: var(--soft-ink); }
+.charity-icon { background: var(--light-orange); color: var(--ink); border-color: #f1c398; }
+.charity-actions { border-color: var(--border); }
+
+@media (max-width: 560px) {
+  .sidebar { background: #4f7942f5; border-top-color: #fff9ed4d; }
+  .topbar::before { color: var(--cream); }
+  .nav-item .count, .nav-item .notification-count { border-color: var(--fern); }
+}
